@@ -1,0 +1,139 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+
+
+/*================= Header Section =================*/
+.title{}
+
+       /* header */
+.logheader{
+	width: 100%;
+	background-color: #0f6704;
+	color: #fff;
+	padding: 0% 12%;
+	text-align: center;
+}
+.logheader img{
+	width: 120px;
+	height: 75px;
+}
+.logheader h1{
+	font-size: 2.8rem;
+	margin: 0.5% auto;
+	text-align: center;
+	letter-spacing: 0.4rem;
+	word-spacing: 1rem;
+	font-weight: 800;
+	font-family: serif;
+}
+.logheader h3{
+	font-size: 2rem; 
+	text-align: center; 
+	color: #fff;
+	letter-spacing: 0.2em; 
+	word-spacing: 0.3em;
+	font-weight: 800; 
+	font-family: sans-serif;
+}
+.logheader h6{
+	font-size: 1.4vw;
+	text-align: center;
+	font-weight: 550;
+       line-height: 0.2;
+       letter-spacing: 0.05em;
+       font-family: courier;
+}
+
+
+/*================= Body Section =================*/
+.animation-img{
+	height: 500px;
+}
+.jumbotron h3{
+  		color: #16611D;
+  	}
+.aboutp{
+	width: 69%;
+	overflow: hidden;
+	text-align: justify;
+}
+.aboutsiwesimg{
+	width: 30%;
+	float: left;
+	margin-right: 1%;
+	overflow: hidden;
+}
+.aboutsiwesimgright{
+	width: 30%;
+	height: 20rem;
+	float: right;
+	border-radius: 3%;
+	margin-left: 1%;
+}
+
+
+/*================= Footer Section =================*/
+.footer{
+	width: 100%;
+	background-color: #0f6704;
+	color: #fff;
+	padding: 1% 0 5% 0;
+	text-align: center;
+	font-size: 1.4rem;
+	letter-spacing: 0.2rem;
+	font-weight: 600;
+}
+.hr{
+	background-color: #fff;
+	color: #fff;
+	width: 70%;
+	margin: auto;
+	border: 1px solid #fff;
+}
+.loghr{
+	width: 90%;
+	margin: auto;
+	border: 1px solid #000000;
+}
+
+
+
+
+/*================ Media Query ================*/
+@media (max-width: 800px){
+	.logheader h1{
+		font-size: 2.7rem;
+	}
+	.logheader h3{
+		font-size: 1.7rem;
+	}
+	.logheader h6{
+		font-size: 1.4rem;
+	}
+	.aboutsiwesimg, .aboutsiwesimgright{
+		width: 100%;
+	}
+	.aboutp{
+		width: 100%;
+	}
+	
+}
+
+
+@media (max-width: 567px){
+	.logheader h1{
+		font-size: 2.5rem;
+		letter-spacing: 0.1rem;
+		word-spacing: 0rem;
+	}
+	.logheader h3{
+		font-size: 1.5rem;
+	}
+	.logheader h6{
+		font-size: 1.2rem;
+	}
+	
+}
+

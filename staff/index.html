@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>CSE SIWES DEFENCE</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="icon" type="text/css" href="../images/fud.png">
+    <link rel="stylesheet" type="text/css" href="../php/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/main.css'>
+
+  <!-- Enternal style -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- External Script -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <style type="">
+    .logheader{padding: 0% 1%;}
+      #headtitle{
+        width:  100%;
+        color:#fff; 
+    }
+    #headtitle h2{
+        width:  70%;
+        margin: 0 auto;
+        font-size: 3rem;
+        font-weight: 800;
+    }
+    .jumbotron{
+        background-color: #fff; 
+        line-height: 2;
+        font-size: 1.4rem;
+        text-align: center;
+        padding-bottom: 0;
+    }
+    .jumbotron h3{
+        color: #16611D;
+        font-size: 2.2rem;
+        box-shadow: 1px 1px 4px; 
+        padding: 1.5% 0; 
+        border-radius: 5%;
+    }
+    #body-sec{
+    background: url('../images/cse4.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+    button{margin:2px;}
+
+/*============================Gradind Form============================*/
+#sumDisplay,#gradeDisplay{
+    width: 49%;
+/*    height: 80%;*/
+    color: #fff;
+    font-size: 120%;
+    font-weight: 800;
+    text-align: center;
+    float: right;
+}
+#sumDisplay{float: left;}
+#gradeDisplay{float: right;}
+.row input{
+    margin: 2% auto;
+    width: 100%;
+}
+.grading-head1{
+    color: #16611D;
+    font-size: 2.5rem;
+    box-shadow: 1px 1px 4px;
+    border-radius: 5%;
+    padding: 1% 0; 
+    width: 95%; 
+    margin: 1% auto;
+}
+
+  </style>
+
+<!-- // ======================Student Grading Script====================== -->
+<script>
+    function calculateSum() {
+            // Get all input elements with class 'number-input'
+            const numberInputs = document.querySelectorAll('.number-input');
+
+            // Calculate the sum of entered numbers
+            const sum = Array.from(numberInputs)
+                .map(input => parseFloat(input.value) || 0) // Convert input values to numbers
+                .reduce((total, num) => total + num, 0);
+
+            // Update the 'sum' input with the calculated sum
+            document.getElementById('sum').value = sum;
+            document.getElementById('sumDisplay').textContent = `Marks: ${sum}`;
+
+
+
+            if (sum >= 70) {
+                document.getElementById('gradeDisplay').textContent = `Grade : A`;
+                document.getElementById('grade').value = ` A`;
+            }else if (sum >= 60) {
+                document.getElementById('gradeDisplay').textContent = `Grade : B`;
+                document.getElementById('grade').value = ` B`;
+            }else if (sum >= 50) {
+                document.getElementById('gradeDisplay').textContent = `Grade : C`;
+                document.getElementById('grade').value = ` C`;
+            }else if (sum >= 45) {
+                document.getElementById('gradeDisplay').textContent = `Grade : D`;
+                document.getElementById('grade').value = ` D`;
+            }else if (sum >= 39) {
+                document.getElementById('gradeDisplay').textContent = `Grade : E`;
+                document.getElementById('grade').value = ` E`;
+            }else{
+                document.getElementById('gradeDisplay').textContent = `Grade : F`;
+                document.getElementById('grade').value = ` F`;
+            }
+        }    
+</script>
+
+</head>
+<body>
+
+        <!--================= Header Section =================-->
+    <section class="title">
+        <!-- header -->
+        <div class="logheader">
+                <div class="row" >
+                    <div class="col-lg-1 col-md-1 col-sm-1">
+                        <img src="../images/fud.png" alt="fud Logo" style="width:100px; height:70px;">
+                    </div>
+                    <div class="col-lg-11 col-md-11 col-sm-11">
+                        <h1 style="font-size:2.4rem; letter-spacing: 0; word-spacing: 0; margin: 1% auto; text-align: center;">DEPARTMENT OF SOFTWARE ENGINEERING, SIWES DEFENCE</h1>
+                    </div>
+                </div>
+        </div>
+       
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success  ahover" style="font-size:115%; ">
+        <a href="home.php" class="navbar-brand">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a href="indreg.php" class="nav-link">IndustrialRegistration</a>
+              </li>
+              <li class="nav-item">
+                <a href="attendance.php" class="nav-link">Attendance</a>
+              </li>
+              <li class="nav-item">
+                <a href="monthrep.php" class="nav-link">MonthlyReport</a>
+              </li>
+              <li class="nav-item">
+                <a href="siwesrep.php" class="nav-link">SIWESReport</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Defence</a>
+              </li>
+              <li class="nav-item">
+                <a href="grade.php" class="nav-link">SIWESResult</a>
+              </li>
+              <li class="nav-item">
+                <a href="contact.php" class="nav-link">StudComplaints</a>
+              </li>
+            </ul>
+        </div>
+    </nav>
+    </section>
+
+
+    <!--================= Body Section =================-->
+<section id="body-sec">
+    <div id="headtitle" class="text-success">
+        <h2><marquee>Welcome to Our CSE SIWES Defence, <span style="color: red; font-weight: 800;">Make sure your in silent Place Before your join</span></marquee></h2>
+    </div>
+
+    <button id="join-btn" class="btn btn-success">Join the CSE SIWES Defence</button>
+
+    <div id="stream-wrapper">
+        <div id="video-streams"></div>
+
+        <div id="stream-controls">
+            <button id="leave-btn" class="btn btn-success">Leave SIWES Defence</button>
+            <button id="mic-btn" class="btn btn-success">Mic On</button>
+            <button id="camera-btn" class="btn btn-success">Camera on</button>
+        </div>
+    </div>
+</section>
+
+
+<!--================= Grade Section=================-->
+<section class="grading">
+    <form id="numberForm" action="uploadgrade.php" method="post">
+        <div class="jumbotron">
+            <div class="container">
+                <h1 class="grading-head1">Grading of Students</h1>
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-6 ">
+                        <input type="text" name="regnum" placeholder="Reg Number" required>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 ">
+                        <input type="text" name="studname" placeholder="Name of Student" required>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 ">
+                        <input type="number" id="num5" class="number-input" placeholder="Oral Presentation:25%" oninput="calculateSum()" required>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 ">
+                        <input type="number" id="num2" class="number-input" placeholder="Technical Report:25%" oninput="calculateSum()" required>
+                    </div>
+
+                    <div class="col-lg-3 col-md-3 col-sm-6 ">
+                        <input type="number" id="num1" class="number-input" placeholder="Log Book:25%" oninput="calculateSum()" required>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 ">
+                        <input type="number" id="num4" class="number-input" placeholder="Employer's Report:15%" oninput="calculateSum()" required>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 ">
+                        <input type="number" id="num3" class="number-input" placeholder="Atitudinal Obsevtn:10%" oninput="calculateSum()" required>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 ">
+                        <p id="sumDisplay" class="bg-success">Marks: <span id="sum">0</span></p>
+                        <p id="gradeDisplay" class="bg-success">Grade: <span id="sum">0</span></p>
+                    </div> 
+
+                    <div class="col-lg-6 col-md-6 col-sm-6 ">
+                        <input type="hidden" id="sum" name="mark" placeholder="Total Mark" readonly>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 ">
+                        <input type="hidden" name="grade" id="grade" class="grade" placeholder="Grade" readonly>
+                    </div>
+                    <div class="col">
+                        <input type="submit" name="submit" value="Submit" class="btn btn-success btn-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</section>
+
+
+    <!--================= Footer Section=================-->
+    <section class="footer">
+        <p>
+            &copy Federal University Dutse
+        </p>
+        <hr class="hr">
+        <p>
+            All rights reserved
+        </p>
+    </section>
+    
+</body>
+<!-- <script src="https://download.agora.io/sdk/release/AgoraRTC_N.js"></script> -->
+<script src="../js/AgoraRTC_N-4.7.3.js"></script>
+<script src='../js/main.js'></script>
+</html>
